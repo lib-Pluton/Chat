@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1036</width>
+    <height>611</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="WindowDragger" name="windowTitlebar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1041</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#windowTitlebar{
+border: 0px none palette(base); 
+background-color:palette(shadow);
+height:20px;
+}</string>
+    </property>
+    <widget class="QLabel" name="spacer">
+     <property name="geometry">
+      <rect>
+       <x>929</x>
+       <y>0</y>
+       <width>4</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>4</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>4</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="minimizeButton">
+     <property name="geometry">
+      <rect>
+       <x>976</x>
+       <y>7</y>
+       <width>27</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#minimizeButton{
+  background-color:none;
+  border:none;
+  width:16px;
+  height:16px;
+  padding:4px;
+}
+#minimizeButton:hover{
+  background-color:palette(alternate-base);
+}
+##minimizeButton:pressed{
+  background-color:palette(highlight);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="darkstyle.qrc">
+       <normaloff>:/darkstyle/icon_window_minimize.png</normaloff>:/darkstyle/icon_window_minimize.png</iconset>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="closeButton">
+     <property name="geometry">
+      <rect>
+       <x>1005</x>
+       <y>7</y>
+       <width>27</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#closeButton{
+  background-color:none;
+  border:none;
+  width:16px;
+  height:16px;
+  padding:4px;
+}
+#closeButton:hover{
+  background-color:palette(alternate-base);
+}
+##closeButton:pressed{
+  background-color:palette(highlight);
+}</string>
+     </property>
+     <property name="icon">
+      <iconset resource="darkstyle.qrc">
+       <normaloff>:/darkstyle/icon_close.png</normaloff>:/darkstyle/icon_close.png</iconset>
+     </property>
+    </widget>
+    <widget class="QLabel" name="titleText">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>241</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">  padding-left:5px;
+  color:rgb(153,153,153);</string>
+     </property>
+     <property name="text">
+      <string>QT - Chat + Online User</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="sayLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>561</y>
+      <width>751</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="userListWidget">
+    <property name="geometry">
+     <rect>
+      <x>769</x>
+      <y>53</y>
+      <width>256</width>
+      <height>499</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sayButton">
+    <property name="geometry">
+     <rect>
+      <x>769</x>
+      <y>560</y>
+      <width>258</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Say</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="roomTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>53</y>
+      <width>751</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>520</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Online User: </string>
+    </property>
+   </widget>
+  </widget>
+  <action name="actionTest">
+   <property name="text">
+    <string>Test</string>
+   </property>
+  </action>
+  <action name="actionTest_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Test</string>
+   </property>
+  </action>
+  <action name="actionTest_3">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Test</string>
+   </property>
+  </action>
+  <action name="actionTest3">
+   <property name="text">
+    <string>Test3</string>
+   </property>
+  </action>
+  <action name="actionTest3_2">
+   <property name="text">
+    <string>Test3</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>WindowDragger</class>
+   <extends>QWidget</extends>
+   <header>windowdragger.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="darkstyle.qrc"/>
+ </resources>
+ <connections/>
+</ui>
